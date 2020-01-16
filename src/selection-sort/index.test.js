@@ -9,4 +9,11 @@ describe('selection sorting algorithm tests', () => {
 
     expect(selectionSort(subject)).toEqual(sorted);
   });
+
+  test('expect array to be sorted numerically with min at start', () => {
+    const subject = [0, 4, 3, 6, 5, 10, 2];
+    const sorted = [0, 2, 3, 4, 5, 6, 10];
+
+    expect(selectionSort(subject)).toEqual(sorted);
+  });
 });
