@@ -4,6 +4,19 @@ The first in a number of repos that are reviewing data structures for the langua
 
 For each of these ones, I am hoping to build a mental model behind the algorithm that is - at least - memorable for myself to at least understand the gist of what occurs for each data structure.
 
+## tl;dr
+
+```shell
+hub clone okeeffed/javascript-data-structures
+cd javascript-data-structures
+# install Jest dep
+yarn
+# run tests in watch mode
+yarn test --watch
+# or run individual test in watch mode
+yarn test data-structure-folder/index.test.js --watch
+```
+
 ## To practice writing the data structures
 
 Within each directory, there is an accompanying `README.md` that is a copy of notes from my [developer notes](https://github.com/okeeffed/developer-notes) that should give a short intro on the topic, as well as an small accompanying test (doesn't reach out for many cases).
