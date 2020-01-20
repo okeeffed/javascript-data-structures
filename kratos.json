@@ -1,10 +1,12 @@
 {
-  "version": "0.0.1",
-  "dependencies": {
-    "type": {
+    "version": "0.0.1",
+    "dependencies": {
+        "type": {},
+        "js-data-structures": {
+            "binary-search": "^0.0.1"
+        }
+    },
+    "storage": {
+        "js-data-structures": "."
     }
-  },
-  "storage": {
-    "js-data-structures": "."
-  }
 }
