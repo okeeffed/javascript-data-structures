@@ -1,17 +1,13 @@
 const sort = array => {
-  // 1. mark first element as sorted
-  // 2. find next value to compare to sorted value
-  // 3. shift left over necessary elements
-  // 4. insert shifted element into sorted subset and repeat 1 to 3
-  for (var i = 0; i < array.length; i++) {
-    let currentUnsortedItem = array[i];
+  // set the marker to first unsorted position, for each incremental position, iterate and check if position - 1 is smaller
+  for (let i = 0; i < array.length; i++) {
     let position = i;
-    // shift left over necessary elements
-    while (currentUnsortedItem < array[position - 1]) {
+    let unsortedEl = array[i];
+    while (unsortedEl < array[position - 1]) {
       array[position] = array[position - 1];
       position--;
     }
-    array[position] = currentUnsortedItem;
+    array[position] = unsortedEl;
   }
   return array;
 };

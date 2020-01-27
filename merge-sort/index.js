@@ -1,7 +1,6 @@
-const mergeSort = array => {
-  // 1. base case length === 1 return array
-  // 2. set left and right array based on midpoint, recursively call
-  // 3. after recursive calls return, merge together
+const mergeSort = (array, label = 'init') => {
+  console.log(label, array);
+  // set base case
   if (array.length < 2) {
     return array;
   }
@@ -10,8 +9,8 @@ const mergeSort = array => {
   const leftArray = array.slice(0, midpoint);
   const rightArray = array.slice(midpoint);
 
-  mergeSort(leftArray);
-  mergeSort(rightArray);
+  mergeSort(leftArray, 'left');
+  mergeSort(rightArray, 'right');
 
   return merge(leftArray, rightArray, array);
 };
@@ -19,7 +18,7 @@ const mergeSort = array => {
 const merge = (leftArray, rightArray, array) => {
   let index = 0;
 
-  while (leftArray.length && rightArray.length) {
+  while (leftArray.length > 0 && rightArray.length > 0) {
     if (rightArray[0] < leftArray[0]) {
       array[index++] = rightArray.shift();
     } else {
@@ -27,11 +26,11 @@ const merge = (leftArray, rightArray, array) => {
     }
   }
 
-  while (leftArray.length) {
+  while (leftArray.length > 0) {
     array[index++] = leftArray.shift();
   }
 
-  while (rightArray.length) {
+  while (rightArray.length > 0) {
     array[index++] = rightArray.shift();
   }
 
