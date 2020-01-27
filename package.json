@@ -7,9 +7,15 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "@types/jest": "^24.9.1",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "lodash.camelcase": "^4.3.0",
+    "waait": "^1.0.5"
   },
   "dependencies": {
+    "date-fns": "^2.9.0",
+    "fs-extra": "^8.1.0",
     "lodash": "^4.17.15"
   }
 }
